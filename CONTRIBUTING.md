@@ -88,9 +88,13 @@ The following is a set of guidelines for contributing to the website repository,
 ## **Part 1: Setting up the development environment**
 ### **1.1 Dev setup (1): Join the repository team**
 
-In the `hfla-site` Slack channel, send an introductory message with your GitHub handle/username asking to be added to the Hack for LA website GitHub repository (this repository).
+To be added to the Hack for LA website GitHub repository (this repository), you must complete the onboarding form.
 
-**NOTE:** Once you have accepted the GitHub invite (comes via email or in your GitHub notifications), **please do the following**:
+<ins>If you did not complete the onboarding form,</ins> attend the next onboarding session (about 45 minutes in) to finish the process so you can receive an invite to the repository.
+
+<ins>If you are sure you completed the onboarding form, but you still have not received an invite to the repository,</ins> go to the `hfla-site` Slack channel for help. Send an introductory message with your GitHub handle/username asking to be added.
+
+Once you have been added to this repository, please do the following:</br>
 
 1. Make your own Hack for LA GitHub organization membership public by following this [guide](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).
 2. Set up two-factor authentication on your account by following this [guide](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
@@ -672,8 +676,13 @@ git pull upstream gh-pages
 
 ##### **i. If there are no changes in the upstream repository**
 
-If you do not see any output, there have not been any changes in the main Hack for LA website repository since the last time you
-checked. So it is safe to push your local commits to your fork.
+If you pulled the upstream repository and there have not been any changes in the main Hack for LA website repository since you last pulled, you may get an output like this: 
+```bash
+ * branch              gh-pages   -> FETCH_HEAD
+Already up to date.
+```
+This means it is safe to push your local commits to your fork.
+**Note**: Depending on your git settings, you may need to write a commit message to merge the changes that were pulled into your local branch.
 
 If you just type `git push` you will be prompted to create a new branch in your GitHub repository. The more complete command below will create a new branch on your copy of the website repository, and then push your local branch there. The name at the end of this command should be the same as the name of the local branch that you created back in step 3, as in the example below:
 
@@ -681,31 +690,11 @@ If you just type `git push` you will be prompted to create a new branch in your 
 git push --set-upstream origin update-give-link-2093
 ```
 
-##### **ii. If there are conflicting changes in the upstream repository**
-
-When you check the upstream repository, you may see output like this:
-
-```bash
-Fetching upstream
-remote: Enumerating objects: 11, done.
-remote: Counting objects: 100% (11/11), done.
-remote: Compressing objects: 100% (7/7), done.
-remote: Total 11 (delta 5), reused 7 (delta 4), pack-reused 0
-Unpacking objects: 100% (11/11), 8.25 KiB | 402.00 KiB/s, done.
-From https://github.com/hackforla/website
-+ 770d667...14f9f46 Bonnie     -> hackforla/Bonnie  (forced update)
-* [new branch]      bonnie     -> hackforla/bonnie
-5773ebe..0c86ecd  gh-pages   -> hackforla/gh-pages
-```
-
-
-**Note:** You can safely ignore changes in other issue branches, such as `bonnie` above. But if you see changes in gh-pages, as in `5773ebe..0c86ecd  gh-pages   -> hackforla/gh-pages`, you should incorporate those changes into your repository before merging or rebasing your issue branch. Use the [instructions below](#27e-working-on-an-issue-5-incorporating-changes-from-upstream) to bring your fork up to date with the main repository.
-
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 
-#### **2.7.e Working on an issue (5): Incorporating changes from upstream**
+#### **2.7.e Working on an issue (5): Alternative methods for incorporating changes from upstream**
 
-Your fork of this repository on GitHub, and your local clone of that fork, will get out of sync with this (upstream) repository from time to time. (That's what has happened when you see something like "This branch is 1 commit behind hackforla:gh-pages" on the GitHub website version of your hackforla repository.)
+This section shows you alternative methods to sync your fork with the main Hack for LA website repository. The recommended method for syncing your fork is through the GitHub browser as detailed in section [2.7.d](https://github.com/hackforla/website/blob/gh-pages/CONTRIBUTING.md#27d-working-on-an-issue-4-pulling-from-upstream-before-you-push)
 
 One way to keep your fork up to date with this repository is to follow these instruction: [Syncing your fork to the original repository via the browser](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser)
 
@@ -754,6 +743,8 @@ If you go to your online GitHub repository this should remove the message "This 
 ##### **i. Incorporating changes into your topic branch**
 
 To incorporate these updates from the main GitHub repository into your topic branch, you can 'rebase' your branch onto your updated gh-pages branch. NOTE you should only rebase if you have never pushed your topic branch to GitHub (or shared it with another collaborator).
+
+We prefer `rebase` because it keeps the commit history clean and linear. If rebasing fails or becomes complex, use `merge`, which preserves branch history but may add additional merge commits.
 
 ```bash
 git checkout update-give-link-2093
@@ -899,7 +890,7 @@ git push --set-upstream origin update-give-link-2093
   <!--  Notes: 
     - If there are no visual changes to the website, delete all of the script below and replace with "- No visual changes to the website"
     - If there are visual changes to the website, include the 'before' and 'after' screenshots below. 
-    - If your images are too big, use the <img src="" width="" length="" />  syntax instead of ![image](link) to format the images
+    - If your images are too big, use the <img src="" width="" length="">  syntax instead of ![image](link) to format the images
     - If images are not loading properly, you might need to double check the syntax or add a newline after the closing </summary> tag 
   --> 
 

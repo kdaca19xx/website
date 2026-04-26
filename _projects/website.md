@@ -62,6 +62,13 @@ leadership:
       slack: https://hackforla.slack.com/team/U07TRV9HRFS
       github: https://github.com/priyanka02art
     picture: https://avatars.githubusercontent.com/priyanka02art
+  - name: Phalguni Kambhalur
+    github-handle: kphalguni
+    role: Product Manager
+    links:
+      slack: https://hackforla.slack.com/team/U07USBKRTFX
+      github: https://github.com/kphalguni
+    picture: https://avatars.githubusercontent.com/kphalguni
   - name: Will Gillis
     github-handle:
     role: Developer Co-Lead
@@ -83,20 +90,34 @@ leadership:
       slack: https://hackforla.slack.com/team/U059K7A1VFB
       github: https://github.com/LRenDO
     picture: https://avatars.githubusercontent.com/LRenDO
-  - name: Mugdh Chauhan
-    github-handle: mugdhchauhan
-    role: Merge Team
-    links:
-      slack: 'https://hackforla.slack.com/team/U08041Y2E72'
-      github: 'https://github.com/mugdhchauhan'
-    picture: https://avatars.githubusercontent.com/mugdhchauhan
   - name: Santiago Vidal
-    github-handle: santisecco
+    github-handle: santiseccovidal
     role: Merge Team
     links:
       slack: https://hackforla.slack.com/team/U06MQ37T90E
-      github: https://github.com/santisecco
-    picture: https://avatars.githubusercontent.com/santisecco
+      github: https://github.com/santiseccovidal
+    picture: https://avatars.githubusercontent.com/santiseccovidal
+  - name: Donovan Vernon
+    github-handle: dvernon5
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U081EQ0JZJS
+      github: https://github.com/dvernon5
+    picture: https://avatars.githubusercontent.com/dvernon5
+  - name: Ryan Keller
+    github-handle: ryanfkeller
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U08SCL4KK3N
+      github: https://github.com/ryanfkeller
+    picture: https://avatars.githubusercontent.com/ryanfkeller
+  - name: Kerstin Carson
+    github-handle: kdaca19xx
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U08G2GETURJ
+      github: https://github.com/kdaca19xx
+    picture: https://avatars.githubusercontent.com/kdaca19xx
 links:
   - name: Wiki
     url: 'https://github.com/hackforla/website/wiki'

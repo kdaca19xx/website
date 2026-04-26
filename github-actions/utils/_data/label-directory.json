@@ -728,11 +728,11 @@
     6713291595
   ],
   "statusHelpWanted": [
-    "Status: Help Wanted",
+    "status: Help Wanted",
     905516648
   ],
   "statusInactive1": [
-    "status: To Update !",
+    "status: To Update!",
     2731965789
   ],
   "statusInactive2": [
@@ -862,5 +862,9 @@
   "NEW-nonPrContribution": [
     "non-PR contribution",
     9642748352
+  ],
+  "NEW-ignoreSkillsIssue": [
+    "ignore: skills issue",
+    10320702637
   ]
 }

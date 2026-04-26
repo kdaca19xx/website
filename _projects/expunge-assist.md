@@ -83,6 +83,13 @@ leadership:
       slack: https://hackforla.slack.com/team/U08Q15W6QE9
       github: https://github.com/shraddhasaraf
     picture: https://avatars.githubusercontent.com/shraddhasaraf
+  - name: Farnaz S
+    github-handle: farnazs
+    role: Product Manager
+    links:
+      slack: https://hackforla.slack.com/team/U0924A99HQR
+      github: https://github.com/farnazs
+    picture: https://avatars.githubusercontent.com/farnazs
 links:
     - name: Overview
       url: '../assets/pdfs/Expunge-Assist-One-Sheet.pdf'
