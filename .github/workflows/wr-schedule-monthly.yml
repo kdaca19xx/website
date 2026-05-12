@@ -6,12 +6,14 @@ on:
     types: [completed]
 
 permissions:
-    contents: read
+  contents: read
 
 jobs:
   Create-New-Issue:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    outputs:
+      issue_url: ${{ steps.create-new-issue.outputs.result }}   
     steps:
       - run: echo "The 'Schedule Monthly' workflow succeeded. Continuing."
       - uses: actions/checkout@v6
@@ -23,8 +25,9 @@ jobs:
         with:
           github-token: ${{ secrets.HACKFORLA_BOT_PA_TOKEN }}
           script: |
-            const script = require('./github-actions/trigger-schedule/list-inactive-members/create-new-issue.js')
-            script({g: github, c: context})
+            const script = require('./github-actions/trigger-schedule/list-inactive-members/create-new-issue.js');
+            const newIssue = await script({g: github, c: context});
+            return newIssue;
 
   Close-New-Issue:
     needs: Create-New-Issue
@@ -60,6 +63,6 @@ jobs:
 
       # Automatically close this last issue- that is, the issue just created by 'Schedule Monthly' 
       - name: Auto close issue
-        run: gh issue close "${{ steps.get-owner-url.outputs.result }}/issues/${{ steps.get-issue-number.outputs.result }}"
+        run: gh issue close "${{ needs.Create-New-Issue.outputs.issue_url }}"
         env:
           GH_TOKEN: ${{ secrets.HACKFORLA_BOT_PA_TOKEN }}

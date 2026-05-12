@@ -48,13 +48,6 @@ leadership:
       slack: https://hackforla.slack.com/team/U07T35HCHAN
       github: https://github.com/amen-ikamba
     picture: https://avatars.githubusercontent.com/amen-ikamba
-  - name: Samhitha Kamma
-    github-handle: Samhitha444
-    role: Product Manager
-    links:
-      slack: https://hackforla.slack.com/team/U07FF529MU6
-      github: https://github.com/Samhitha444
-    picture: https://avatars.githubusercontent.com/Samhitha444
   - name: Priyanka Jujjavarapu
     github-handle: priyanka02art
     role: Product Manager
@@ -118,6 +111,13 @@ leadership:
       slack: https://hackforla.slack.com/team/U08G2GETURJ
       github: https://github.com/kdaca19xx
     picture: https://avatars.githubusercontent.com/kdaca19xx
+  - name: Xavier Neal-Carson
+    github-handle: xnealcarson
+    role: Merge Team
+    links:
+      slack: https://hackforla.slack.com/team/U08GNFS09SL
+      github: https://github.com/xnealcarson
+    picture: https://avatars.githubusercontent.com/xnealcarson
 links:
   - name: Wiki
     url: 'https://github.com/hackforla/website/wiki'
